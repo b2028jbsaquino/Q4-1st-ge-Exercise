@@ -5,6 +5,7 @@ function solve(){
     // access the form defined in index and create a form data object using FormData()
     const form = document.getElementById('input_form');
     const formData = new FormData(form);
+    
      // get the name of the celebrant
     console.log(formData.get("name"));
     const name = formData.get('name');
@@ -13,7 +14,13 @@ function solve(){
     console.log(formData.get('gender'));
     let gender = formData.get('gender');
 
-  
+    // call 
+    let number = document.getElementById('number');
+
+    // print song lyrics
+    for (let i=0; i<=number-1; i++){
+      console.log(`${}`)
+    }
     /* Use the songs below needed in this exercise:
     
     the Good Fellow replacing blanks with either he's or she's
@@ -45,6 +52,6 @@ function solve(){
       outputDiv.innerHTML += `${key}: ${value} <br>`;
     }
     const myData = Object.fromEntries(formData.entries());
-    console.log(myData)
-    console.log(formData.entries())
+    console.log(myData);
+    console.log(formData.entries());
   }
