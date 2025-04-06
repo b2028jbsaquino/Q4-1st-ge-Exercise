@@ -29,17 +29,34 @@
 
 
   <header class="w3-container" id="header" > 
-    <h1>Benj Aquino - III-K - Mar 2025</h1>
-    <h2> Birthday </h2>
+    <h1>Benj Aquino / III-K / Mar~Apr 2025</h1>
+    <h2> Birthday Celebration </h2>
   </header>
 
   <section class="w3-container" id="input"> 
-    <h2>Output</h2>
-    <!-- Place your output here -->
+    <h2>[ Party Pipol ]</h2>
+    <div class="w3-card w3-padding w3-margin">
+      {{#each formData}} {{!-- {{loop going through each "party person" in formData}} --}}
+        <p><strong>{{@key}}:</strong> {{this}}</p> {{!-- {{info of each "party person" iteration}} --}}
+      {{/each}}
+    </div>
+    
+    <h2>[ Group Song ]</h2>
+    <div class="w3-card w3-padding w3-margin">
+      <h3>< Our celebrant! ></h3>
+      <p><strong>Nickname:</strong> {{name}}</p>
+      <p><strong>Sex:</strong> {{sex}}</p>
+      <p><strong>Number of Close Friends/Family:</strong> {{guestCount}}</p>
+      
+      <h3>< Let's sing! ></h3>
+      {{#each song}} 
+        <p><strong>{{singer}}:</strong> {{word}}</p> {{!-- {{assigned words/lines to each singer}} --}}
+      {{/each}}
+    </div>
   </section>
 
   <footer class="w3-container ">
-    <p> &copy; 2024 CS3 Teachers & JBSAquino </p>
+    <p> &copy; 2025 CS3 Teachers & JBSAquino </p>
   </footer>
 
   
