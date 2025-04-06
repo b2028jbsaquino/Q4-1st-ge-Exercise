@@ -29,12 +29,12 @@
 
 
   <header class="w3-container" id="header" > 
-    <h1>Benj Aquino - III-K - Mar 2025</h1>
-    <h2> Birthday </h2>
+    <h1>Saya-quino! Birthday Services</h1>
+    <h3>(Est. 03-2025 @K2028)</h3>
   </header>
 
   <section class="w3-container" id="input"> 
-    <h2>Input</h2>
+    <h2>[ Party Details ]</h2>
     <!-- define the form and prevents its default action after it is submitted then call three functions-->
     <form  id="input_form" method="post" action="/happy" 
         onsubmit="return confirm('Sure to Submit')"
@@ -43,23 +43,23 @@
 
       <div class="w3-row">
         <div class="w3-third w3-panel w3-card w3-margin">
-          <label for="name">Your nickname:</label></br>
+          <label for="name">Celebrant's name:</label></br>
           <input class="w3-input" type="text" id="name" name="name"><br>
 
-          <label for="gender">Gender: </label><br>
-          <input class="w3-radio"  type="radio" id="male" name="gender" value="male">
+          <label for="sex">Celebrant's sex: </label><br>
+          <input class="w3-radio"  type="radio" id="male" name="sex" value="male">
           <label for="male">Male</label> <br>
-          <input class="w3-radio w3-margin-bottom"  type="radio" id="female" name="gender" value="female">
+          <input class="w3-radio w3-margin-bottom"  type="radio" id="female" name="sex" value="female">
           <label for="female">Female</label>
         </div>
       
       <div class="w3-panel w3-third w3-card w3-margin w3-padding"
-      <label for="number"> Number of close family and friends: </label><br>
-      <select class="w3-select w3-border" id="number" name="number" onchange="generateGuestFields()">
-        <option value="">--Please choose a number--</option>
+      <label for="guestCount">Guest List</label><br>
+      <select class="w3-select w3-border" id="guestCount" name="guestCount" onchange="generateGuestFields()">
+        <option value="">How many guests?</option>
         <!-- sample use of script to generate choices for a drop-down menu that shows numbers from 1 to 16 -->
         <script>
-          for(let i=1; i<=16; i++ ){
+          for(let i=1; i<=16; i++){
             document.write(`<option value="${i}"> ${i} </option>`);
           }
         </script>
@@ -82,9 +82,9 @@
 
   <script>
     function generateGuestFields(){
-    const num = document.getElementById('number').value; // gets the numer of guests
+    const num = document.getElementById('guestCount').value; // gets the numer of guests
     const container = document.getElementById('guests');
-    container.innerHTML = 'Enter the name(s) of your invitees: <br>';
+    container.innerHTML = 'Name(s) of your invitee(s): <br>';
 
     for (let i=0; i<num; i++){
       // steps to create the individual input field 
