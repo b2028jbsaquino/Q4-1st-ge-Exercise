@@ -10,17 +10,39 @@ function solve(){
     console.log(formData.get("name"));
     const name = formData.get('name');
   
-    // get and checks the gender
-    console.log(formData.get('gender'));
-    let gender = formData.get('gender');
+    // get and checks the sex
+    console.log(formData.get('sex'));
+    let sex = formData.get('sex');
 
-    // call 
-    let number = document.getElementById('number');
-
-    // print song lyrics
-    for (let i=0; i<=number-1; i++){
-      console.log(`${}`)
+    let pronoun = "";
+    
+    switch(sex){ // pronoun based on sex
+      case "male":
+        pronoun = "he's";
+        break;
+      case "female":
+        pronoun = "she's";
+        break;
+      default:
+        pronoun = "they're";
     }
+
+    // song lyrics
+    let hbdLyrics = [
+      "Happy", "birthday", "to", "you.",
+      "Happy", "birthday", "to", "you.",
+      "Happy", "birthday", "dear",`${name} + .`,
+      "Happy", "birthday", "to", "you!"
+     ];
+     
+    let jollyLyrics = `For ${pronoun} a jolly good fellow.
+                       For ${pronoun} a jolly good fellow.
+                       For ${pronoun} a jolly good fellow, which nobody can deny!`;
+
+    // print lyrics
+    console.log("< 1/2 > Happy Birthday to you!", hbdLyrics);
+    console.log("< 2/2 > You're a jolly good fellow!", jollyLyrics);
+
     /* Use the songs below needed in this exercise:
     
     the Good Fellow replacing blanks with either he's or she's
